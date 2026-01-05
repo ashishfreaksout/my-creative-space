@@ -2,8 +2,8 @@ import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/ashish", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/ashish", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/ashishfreaksout", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ashish-160124126/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:aashish@horizon.csueastbay.edu", label: "Email" },
   { icon: Phone, href: "tel:+16692431540", label: "Phone" },
 ];
@@ -42,7 +42,7 @@ const Footer = () => {
           
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            Designed & Built by <span className="text-primary">Ashish</span>
+            Designed & Built by <span className="text-primary">Me</span>
           </p>
         </div>
       </div>
