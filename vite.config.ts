@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // IMPORTANT: base must match your GitHub Pages repo name
+  // This makes assets load correctly at: https://ashishfreaksout.github.io/my-creative-space/
+  base: mode === "production" ? "/my-creative-space/" : "/",
   server: {
     host: "::",
     port: 8080,
