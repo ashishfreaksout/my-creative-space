@@ -25,7 +25,7 @@ const projects: Project[] = [
     title: "IBM Data Analyst Capstone",
     description: "Comprehensive analysis of programming language and database trends using the 2019 Stack Overflow Developer Survey. Utilized yfinance library to extract stock data for Tesla and GameStop.",
     technologies: ["Python", "IBM Cognos", "yfinance", "Data Analysis"],
-    github: "https://github.com/ashish",
+    github: "https://github.com/ashishfreaksout1/Final_assignment",
     featured: true,
   },
   {
