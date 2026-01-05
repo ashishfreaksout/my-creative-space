@@ -5,9 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // For GitHub Pages with a custom domain, assets should be served from the root.
-  // If you ONLY use your custom domain (not the /my-creative-space/ URL), base should be "/".
-  base: "/",
+  // For GitHub Pages, set base to your repository name
+  base: mode === "production" ? "/my-creative-space/" : "/",
   server: {
     host: "::",
     port: 8080,
