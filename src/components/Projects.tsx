@@ -18,7 +18,7 @@ const projects: Project[] = [
     title: "Data Analysis: Hypothesis Testing",
     description: "Comprehensive data analysis project using R and R Markdown, focusing on hypothesis testing to derive insights. Performed data exploration and statistical analysis to identify trends and patterns.",
     technologies: ["R", "R Markdown", "Statistical Analysis", "Data Visualization"],
-    github: "https://github.com/ashish",
+    github: "https://github.com/ashishfreaksout/Data-Analysis-project",
     featured: true,
   },
   {
