@@ -1,16 +1,33 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "About", id: "about" },
+  { name: "Projects", id: "projects" },
+  { name: "Contact", id: "contact" },
 ];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (id: string) => {
+    // If not on home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +55,11 @@ const Navbar = () => {
           className="font-display text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           AS
         </motion.a>
@@ -51,13 +73,13 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <a
-                href={link.href}
+              <button
+                onClick={() => scrollToSection(link.id)}
                 className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium"
               >
                 <span className="text-primary font-mono text-xs mr-1">0{index + 1}.</span>
                 {link.name}
-              </a>
+              </button>
             </motion.li>
           ))}
           <motion.li
@@ -108,14 +130,16 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  <a
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                  <button
+                    onClick={() => {
+                      scrollToSection(link.id);
+                      setIsMobileMenuOpen(false);
+                    }}
                     className="text-foreground hover:text-primary transition-colors duration-300 text-lg font-medium"
                   >
                     <span className="text-primary font-mono text-sm mr-2">0{index + 1}.</span>
                     {link.name}
-                  </a>
+                  </button>
                 </motion.li>
               ))}
               <motion.li
