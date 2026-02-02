@@ -88,7 +88,7 @@ const Navbar = () => {
             transition={{ duration: 0.4, delay: 0.3 }}
           >
             <motion.a
-              href={`${import.meta.env.BASE_URL}resume.pdf`}
+              href={`${import.meta.env.BASE_URL}Ashish_Resume_Data_eng.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-medium text-primary border border-primary rounded hover:bg-primary/10 transition-colors duration-300"
@@ -148,7 +148,7 @@ const Navbar = () => {
                 transition={{ duration: 0.3, delay: 0.3 }}
               >
                 <a
-                  href={`${import.meta.env.BASE_URL}resume.pdf`}
+                  href={`${import.meta.env.BASE_URL}Ashish_Resume_Data_eng.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 text-primary border border-primary rounded hover:bg-primary/10 transition-colors duration-300"
