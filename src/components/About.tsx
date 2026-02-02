@@ -57,7 +57,7 @@ const education = [
     degree: "Master's, Statistics (Data Science)",
     school: "Cal State University East Bay",
     period: "Sep 2024 - Jun 2026",
-    gpa: "3.565"
+    gpa: "3.6"
   },
   {
     degree: "Post-Grad Diploma, Wireless Networking",
