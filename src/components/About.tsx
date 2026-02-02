@@ -14,7 +14,7 @@ const skills = {
 
 const experience = [
   {
-    title: "Junior Data Analyst Professional Program",
+    title: "Junior Data Analyst Intern",
     company: "NPower Canada",
     period: "Jan 2024 - Apr 2024",
     highlights: [
@@ -24,9 +24,18 @@ const experience = [
     ]
   },
   {
+    title: "IT Support Analyst",
+    company: "Nordia Inc.",
+    period: "Mar 2022 - Sep 2023",
+    highlights: [
+      "L1/L2 IT support for hardware, software, OS, network issues",
+      "Managed Active Directory, Microsoft 365, device setup",
+    ]
+  },
+  {
     title: "Technical Support Representative",
     company: "Nordia Inc.",
-    period: "Mar 2020 - Jun 2023",
+    period: "Jan 2020 - Feb 2022",
     highlights: [
       "Enhanced Layer 2 troubleshooting procedures",
       "Conducted fiber attenuation assessments",
